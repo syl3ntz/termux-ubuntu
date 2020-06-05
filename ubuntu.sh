@@ -30,6 +30,7 @@ if [ "$first" != 1 ];then
 	echo "decompressing ubuntu image"
 	proot --link2symlink tar -xf ${cur}/${tarball} --exclude='dev'||:
 	echo "fixing nameserver, otherwise it can't connect to the internet"
+	rm etc/resolv.conf
 	echo "nameserver 1.1.1.1" > etc/resolv.conf
 	cd "$cur"
 fi
