@@ -22,7 +22,7 @@ if [ "$first" != 1 ];then
 		*)
 			echo "unknown architecture"; exit 1 ;;
 		esac
-		wget "http://cloud-images.ubuntu.com/releases/disco/release/ubuntu-19.04-server-cloudimg-${archurl}-root.tar.xz" -O $tarball
+		wget "https://partner-images.canonical.com/core/focal/current/ubuntu-focal-core-cloudimg-${archurl}-root.tar.gz" -O $tarball
 	fi
 	cur=`pwd`
 	mkdir -p "$folder"
